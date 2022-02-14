@@ -10,7 +10,7 @@ Create a database named CreditApp in Postgresql.
 
 Clone the repo to your computer and Run the project.
 
-Go to "http://localhost:8080/swagger-ui/index.html" from browser
+Go to "http://localhost:8080/swagger-ui.html" from browser
 
 Create a new user with /users end point
 
