@@ -27,3 +27,7 @@ Here is the list of technologies I used for the Credit Application System;
 - Lombok
 - Swagger UI
 - Unit/Integration Tests
+
+## Author
+
+- Okan Gülsevil, Software Developer -> [GitHub Pages](https://github.com/okangulsevil) [Linkedin Pages](https://www.linkedin.com/in/okangulsevil/) 
