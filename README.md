@@ -32,4 +32,4 @@ Here is the list of technologies I used for the Credit Application System;
 
 ## Author
 
-- Okan Gülsevil, Software Developer -> [GitHub Pages](https://github.com/okangulsevil), [Linkedin Pages](https://www.linkedin.com/in/okangulsevil/) 
+- Okan Gülsevil, Software Developer -> [GitHub Pages](https://github.com/okangulsevil), [Linkedin Pages](https://www.linkedin.com/in/okangulsevil/)
