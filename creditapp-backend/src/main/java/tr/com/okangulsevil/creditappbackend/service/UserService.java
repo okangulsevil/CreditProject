@@ -5,6 +5,7 @@ import tr.com.okangulsevil.creditappbackend.dto.UserDto;
 import tr.com.okangulsevil.creditappbackend.dto.converter.UserDtoConverter;
 import tr.com.okangulsevil.creditappbackend.dto.request.CreateUserRequest;
 import tr.com.okangulsevil.creditappbackend.dto.request.UpdateUserRequest;
+import tr.com.okangulsevil.creditappbackend.exception.GeneralNotFoundException;
 import tr.com.okangulsevil.creditappbackend.model.User;
 import tr.com.okangulsevil.creditappbackend.repository.UserRepository;
 
@@ -38,8 +39,9 @@ public class UserService {
     }
 
     public UserDto getUserById(Long userId) {
-        //Custom Exception Eklenecek
-        return userDtoConverter.convert(userRepository.getById(userId));
+        return userDtoConverter.convert(userRepository.findById(userId).orElseThrow(
+                () -> new GeneralNotFoundException("User not found User İD: " + userId)
+        ));
     }
 
     public UserDto updateUser(Long userId, UpdateUserRequest updateUserRequest) {
@@ -57,19 +59,24 @@ public class UserService {
     }
 
     public void deleteUser(Long userId) {
+        getUserById(userId);
         userRepository.deleteById(userId);
     }
 
     public UserDto findUserByIdentityNumber(String identityNumber){
-        return userDtoConverter.convert(userRepository.findByIdentityNumber(identityNumber));
+        return userDtoConverter.convert(getUserByIdentityNumber(identityNumber));
     }
 
     protected User getUserByIdentityNumber(String identityNumber){
-        return userRepository.findByIdentityNumber(identityNumber);
+        return userRepository.findByIdentityNumber(identityNumber).orElseThrow(
+                () -> new GeneralNotFoundException("User not found with Identity Number : " + identityNumber)
+        );
     }
 
     public UserDto findUserByPhoneNumber(String phoneNumber) {
-        return userDtoConverter.convert(userRepository.findByPhoneNumber(phoneNumber));
+        return userDtoConverter.convert(userRepository.findByPhoneNumber(phoneNumber).orElseThrow(
+                () -> new GeneralNotFoundException("User not found with Phone Number : " + phoneNumber)
+        ));
     }
 
 }

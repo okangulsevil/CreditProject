@@ -5,7 +5,7 @@ import tr.com.okangulsevil.creditappbackend.dto.CreditDto;
 import tr.com.okangulsevil.creditappbackend.dto.request.CreateCreditRequest;
 import tr.com.okangulsevil.creditappbackend.service.CreditService;
 @RestController
-@RequestMapping("/credits")
+@RequestMapping("/v1/credits")
 public class CreditController {
 
     private final CreditService creditService;

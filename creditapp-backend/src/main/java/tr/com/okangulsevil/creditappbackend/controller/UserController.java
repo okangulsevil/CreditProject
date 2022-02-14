@@ -1,5 +1,6 @@
 package tr.com.okangulsevil.creditappbackend.controller;
 
+import javassist.NotFoundException;
 import org.springframework.web.bind.annotation.*;
 import tr.com.okangulsevil.creditappbackend.dto.UserDto;
 import tr.com.okangulsevil.creditappbackend.dto.request.CreateUserRequest;
