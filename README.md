@@ -4,9 +4,11 @@ This project is a credit application system demo for Payten.
 
 ## How to build
 
-Make sure your computer has java11 and maven installed.
+Make sure your computer has java11 and postgresql installed.
 
-clone the repo to your computer.
+Create a database named CreditApp in Postgresql.
+
+Clone the repo to your computer and Run the project.
 
 Go to "http://localhost:8080/swagger-ui/index.html" from browser
 
