@@ -2,7 +2,7 @@
 
 This project is a credit application system demo for Payten.
 
-##How to build
+## How to build
 
 Make sure your computer has java11 and maven installed.
 
